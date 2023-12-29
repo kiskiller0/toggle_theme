@@ -1,0 +1,133 @@
+source $VIMRUNTIME/defaults.vim
+
+
+let mapleader = " "
+
+set sw=2
+set ts=2
+set number
+set relativenumber
+set mouse=a
+set clipboard=unnamedplus
+
+vnoremap <C-c> y
+nnoremap <C-c> y
+
+vnoremap <C-v> p
+nnoremap <C-v> p
+inoremap <C-v> <Esc>p
+
+vnoremap <C-s> <Esc>:w<Cr>
+nnoremap <C-s> :w<Cr>
+inoremap <C-s> <Esc>:w<Cr>
+
+vnoremap <C-u> <Esc>u
+nnoremap <C-u> u
+inoremap <C-u> <Esc>ui
+
+" deactivating u
+
+vnoremap u :echo "What what what ?"<Cr>
+nnoremap u :echo "What what what ?"<Cr>
+
+inoremap <C-d> <Esc>"1yy"1pi
+vnoremap <C-d> "1yy"1p
+nnoremap <C-d> "1yy"1p
+
+nnoremap <S-Right> gt
+nnoremap <S-Left> gT
+nnoremap <S-PageDown> gt
+nnoremap <S-PageUp> gT
+
+nnoremap <C-Left> :vertical resize -5<Cr>
+nnoremap <C-Right> :vertical resize +5<Cr>
+nnoremap <C-Down> :resize -5<Cr>
+nnoremap <C-Up> :resize +5<Cr>
+
+nnoremap <F5> :!./build.sh<Cr>
+nnoremap <F4> :!betty %<Cr>
+
+nnoremap <S-Right> gt
+nnoremap <S-Left> gT
+nnoremap <S-PageDown> gt
+nnoremap <S-PageUp> gT
+
+
+nnoremap <C-Left> :vertical resize -5<Cr>
+nnoremap <C-Right> :vertical resize +5<Cr>
+nnoremap <C-Down> :resize -5<Cr>
+nnoremap <C-Up> :resize +5<Cr>
+
+call plug#begin()
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf'
+Plug 'gosukiwi/vim-smartpairs'
+Plug 'djoshea/vim-autoread'
+Plug 'tpope/vim-surround'
+Plug 'wuelnerdotexe/nerdterm'
+Plug 'tpope/vim-commentary'
+Plug 'zirrostig/vim-schlepp'
+Plug 'morhetz/gruvbox'
+Plug 'robertmeta/nofrils'
+Plug 'jaredgorski/Mies.vim'
+Plug 'lilydjwg/colorizer'
+Plug 'ntk148v/komau.vim'
+Plug 'nikolvs/vim-sunbather'
+Plug 'lunacookies/vim-colors-xcode'
+Plug 'humanoid-colors/vim-humanoid-colorscheme'
+Plug 'zekzekus/menguless'
+Plug 't184256/vim-boring'
+Plug 'huyvohcmc/atlas.vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
+"
+" theme gruv box
+" autocmd vimenter * ++nested colorscheme gruvbox
+" let g:gruvbox_italic = 1
+
+set termguicolors
+set background=dark
+colorscheme PaperColor
+
+" setting guioptions:
+if has("gui_running")
+	set guioptions=""
+	set guifont=JetBrains\ Mono\ Medium\ 13
+endif
+
+" let g:colors_name='mies'
+
+" fzf maps:
+nnoremap <C-f> :Files<Cr>
+" nnoremap <C-f>b :Buffers<Cr>
+" nnoremap <C-f>m :Marks<Cr>
+" nnoremap <C-f>w :Windows<Cr>
+
+" term mapping:
+nmap <C-j> <Plug>(NERDTermToggle)
+imap <C-j> <Esc><Plug>(NERDTermToggle)
+tmap <C-j> <Plug>(NERDTermToggle)
+tmap <F5> <C-w>:!./build.sh<Cr>
+
+" commentary mapping
+nmap <C-_> <S-v>gc
+vmap <C-_> gc
+imap <C-_> <Esc><S-v>gc$a
+
+" https://vi.stackexchange.com/questions/422/how-can-i-display-tabs-as-characters
+set nolist
+set listchars=eol:↓,tab:\»\ \ ,trail:●,extends:…,precedes:…
+noremap <F3> :set invlist<Cr>
+
+" schlepp mappings:
+vmap <unique> <up>    <Plug>SchleppIndentUp
+vmap <unique> <down>  <Plug>SchleppIndentDown
+vmap <unique> <left>  <Plug>SchleppLeft
+vmap <unique> <right> <Plug>SchleppRight
+
+
+" Conquer Of Completion!
+" source ~/.vim/coc.vim

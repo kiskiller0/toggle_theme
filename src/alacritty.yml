@@ -1,0 +1,71 @@
+# import:
+#  - ~/.config/alacritty/themes/themes/pencil_dark.yaml
+define: &font_family "Fantasque Sans Mono"
+
+window:
+  decorations: full
+  opacity: 0.9
+  title: Alacritty
+  dynamic_title: true
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+font:
+  normal:
+    family: *font_family
+    style: Regular
+
+  bold:
+    family: *font_family
+    style: Bold
+
+  italic:
+    family: *font_family
+    style: Bold
+
+  bold_italic:
+    family: *font_family
+    style: Bold Italic
+  size: 14.0
+
+bell:
+  animation: EaseOutExpo
+
+cursor:
+  style:
+    shape: Block
+    blinking: always
+
+  blink_interval: 200
+  unfocused_hollow: true
+
+key_bindings:
+  - { key: Return,         mods: Control,                    action: SpawnNewInstance }
+# Shell
+#
+# You can set `shell.program` to the path of your favorite shell, e.g.
+# `/bin/fish`. Entries in `shell.args` are passed unmodified as arguments to the
+# shell.
+#
+# Default:
+#   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
+#   - (Windows) powershell
+#shell:
+#  program: /bin/bash
+#  args:
+#    - --login
+
+# Startup directory
+#
+# Directory the shell is started in. If this is unset, or `None`, the working
+# directory of the parent process will be used.
+#working_directory: None
+
+# Offer IPC using `alacritty msg` (unix only)
+#ipc_socket: true
+
