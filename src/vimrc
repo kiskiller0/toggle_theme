@@ -89,8 +89,8 @@ call plug#end()
 " let g:gruvbox_italic = 1
 
 set termguicolors
-set background=dark
-colorscheme PaperColor
+set background=light
+colorscheme xcode
 
 " setting guioptions:
 if has("gui_running")

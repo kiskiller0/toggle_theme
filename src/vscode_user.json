@@ -1,6 +1,11 @@
 {
-    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
-    "editor.fontSize": 16,
+    "editor.fontFamily": "'JetBrains Mono','Fantasque Sans Mono', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontSize": 14,
     "editor.cursorSmoothCaretAnimation": "on",
-    "window.menuBarVisibility": "toggle"
+    "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "Default Light Modern",
+    "window.zoomLevel": 1,
+    "editor.minimap.enabled": false,
+    "workbench.editor.tabSizing": "fixed",
+    "window.density.editorTabHeight": "compact",
 }

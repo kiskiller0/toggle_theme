@@ -3,14 +3,17 @@ import subprocess
 from helpers import set_theme
 
 for og in constants.PATHS.keys():
-    og_file = open(og, "r+")
-    alt_file = open(constants.PATHS[og], "r+")
+    og_file = open(og, "r")
+    alt_file = open(constants.PATHS[og], "r")
 
     og_content = og_file.read()
     alt_content = alt_file.read()
 
-    og_file.seek(0)
-    alt_file.seek(0)
+    og_file.close()
+    alt_file.close()
+
+    og_file = open(og, "w")
+    alt_file = open(constants.PATHS[og], "w")
 
     og_file.write(alt_content)
     alt_file.write(og_content)

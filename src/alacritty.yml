@@ -1,5 +1,5 @@
-# import:
-#  - ~/.config/alacritty/themes/themes/pencil_dark.yaml
+import:
+ - ~/.config/alacritty/themes/themes/alabaster.yaml
 define: &font_family "Fantasque Sans Mono"
 
 window:
@@ -46,26 +46,3 @@ cursor:
 
 key_bindings:
   - { key: Return,         mods: Control,                    action: SpawnNewInstance }
-# Shell
-#
-# You can set `shell.program` to the path of your favorite shell, e.g.
-# `/bin/fish`. Entries in `shell.args` are passed unmodified as arguments to the
-# shell.
-#
-# Default:
-#   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
-#   - (Windows) powershell
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
-
-# Startup directory
-#
-# Directory the shell is started in. If this is unset, or `None`, the working
-# directory of the parent process will be used.
-#working_directory: None
-
-# Offer IPC using `alacritty msg` (unix only)
-#ipc_socket: true
-

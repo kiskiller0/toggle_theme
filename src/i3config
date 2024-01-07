@@ -7,7 +7,7 @@
 exec_always --no-startup-id xset r rate 300 35 
 exec_always "setxkbmap -layout us,ara -variant ,, -option grp:alt_shift_toggle"
 
-default_border pixel 2
+default_border pixel 3
 # hide_edge_borders both
 smart_borders on
 
@@ -69,7 +69,7 @@ font pango:monospace 11
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -253,10 +253,10 @@ bindsym $mod+r mode "resize"
 # 				}
 # }
 
-client.focused #87a556 #5f743c #ffffff #dfef9f #5f743c
+client.focused #87a556 #5f743c #ffffff #dfef9f #ff3f3f 
 
 bar {
-				status_command bumblebee-status -m title pomodoro network_traffic cpu memory disk todo time -t nord-powerline
+				status_command bumblebee-status -m title pomodoro network_traffic cpu memory disk todo time -t gruvbox-light
 				position bottom
 				# mode hide
 				# tray_output true
@@ -272,9 +272,9 @@ bar {
 
 
 
-# 					background #FFEACB
-#           focused_workspace  #000000 #4E350E #FFFFFF
-#           active_workspace  #000000 #FFEACB #FFFFFF
-# 					inactive_workspace #000000 #FFEACB #000000
+ 					background #FFEACB
+          focused_workspace  #000000 #4E350E #FFFFFF
+          active_workspace  #000000 #FFEACB #FFFFFF
+					inactive_workspace ##000000 #FFEACB #000000
 				}
 }
